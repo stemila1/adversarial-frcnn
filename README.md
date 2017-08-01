@@ -40,6 +40,11 @@ This implementation is built on a *fork* of the OHEM code ([here](https://github
 
 Please follow the exact installation and download the VOC data as the Faster R-CNN Python code ([here](https://github.com/rbgirshick/py-faster-rcnn)).
 
+
+### Visual Object Dataset Converter
+The visual object dataset converter is a fork of a [fork](https://github.com/nghiattran/vod-converter) from [vod-converter](https://github.com/umautobots/vod-converter) with modifications to work with the LISA dataset. 
+
+
 ### Usage
 
 To run the code, one can simply do,
