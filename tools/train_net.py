@@ -85,6 +85,7 @@ if __name__ == '__main__':
     if args.cfg_file is not None:
         cfg_from_file(args.cfg_file)
     if args.set_cfgs is not None:
+        print("setcfgs is not none")
         cfg_from_list(args.set_cfgs)
 
     cfg.GPU_ID = args.gpu_id
