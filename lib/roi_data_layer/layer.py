@@ -380,8 +380,8 @@ class ASDNPretrainLossLayer(caffe.Layer):
             nowlbl = labels_pos[i]
             assert(nowlbl > 0)
             for j in range(attempts):
-                if min_prop > prop[j * N + i][nowlbl]: 
-                    min_prop = prop[j * N + i][nowlbl]
+                if min_prop > prop[j * N + i][int(nowlbl)]: 
+                    min_prop = prop[j * N + i][int(nowlbl)]
                     min_id = j * N + i
 
             mask_label[i, :, :, :] = conv_feat_mask[min_id]

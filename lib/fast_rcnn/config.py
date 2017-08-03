@@ -96,7 +96,7 @@ __C.TRAIN.PROPOSAL_METHOD = 'selective_search'
 __C.TRAIN.ASPECT_GROUPING = True
 
 # Use RPN to detect objects
-__C.TRAIN.HAS_RPN = False
+__C.TRAIN.HAS_RPN = True
 # IOU >= thresh: positive example
 __C.TRAIN.RPN_POSITIVE_OVERLAP = 0.7
 # IOU < thresh: negative example
@@ -161,7 +161,7 @@ __C.TEST.SVM = False
 __C.TEST.BBOX_REG = True
 
 # Propose boxes
-__C.TEST.HAS_RPN = False
+__C.TEST.HAS_RPN = True
 
 # Test using these proposals
 __C.TEST.PROPOSAL_METHOD = 'selective_search'
@@ -265,6 +265,7 @@ def _merge_a_into_b(a, b):
                 raise
         else:
             b[k] = v
+            setattr(b, k, v)
 
 def cfg_from_file(filename):
     """Load a config file and merge it into the default options."""
